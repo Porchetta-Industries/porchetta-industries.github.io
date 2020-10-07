@@ -3,16 +3,16 @@
   <meta name="twitter:site" content="@porchetta_ind">
   <meta name="twitter:creator" content="@byt3bl33d3r">
 
-  <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:description"
+    content="{% if page.description %}{{ site.description }}{% else %}{{ page.content | strip_html | truncate: 85 }}{% endif %}">
 
   {% if page.image %}
-    <meta name="twitter:image" content="{{site.url}}{{page.image}}">
+    <meta property="og:image" content="{{ site.url }}{{ page.image }}">
   {% else %}
-    <meta name="twitter:image" content="{{site.url}}/images/porchetta-logo2.jpg">
+    <meta property="og:image" content="{{ site.url }}/images/porchetta-logo2.jpg">
   {% endif %}
-
-  <meta name="twitter:description"
-    content="{% if page.description %}{{ site.description }}{% else %}{{ page.content | strip_html | truncate: 85 }}{% endif %}">
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
