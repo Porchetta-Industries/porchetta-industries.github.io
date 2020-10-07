@@ -17,7 +17,7 @@
 
   {% if page.description %}
     <meta name="twitter:description"
-      content="{{ page.meta_description }}">
+      content="{{ page.content | strip_html | xml_escape | truncate: 200 }}">
   {% else %}
     <meta name="twitter:description"
       content="A community that provides support to Open Source Infosec/hacking tool developers and helps them succeed with their own Github Sponsorships">
