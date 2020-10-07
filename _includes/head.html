@@ -15,9 +15,12 @@
     <meta name="twitter:image" content="{{site.baseurl}}/images/porchetta-logo2.png">
   {% endif %}
 
-  {% if page.description %}
+  {% if post.description %}
     <meta name="twitter:description"
-      content="{{ page.content | strip_html | xml_escape | truncate: 200 }}">
+      content="{{ post.description }}">
+  {% elsif post.content % }
+    <meta name="twitter:description"
+      content="{{ post.content | strip_html | truncate: 85 }}">
   {% else %}
     <meta name="twitter:description"
       content="A community that provides support to Open Source Infosec/hacking tool developers and helps them succeed with their own Github Sponsorships">
