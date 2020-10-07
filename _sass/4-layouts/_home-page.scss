@@ -156,10 +156,11 @@
     letter-spacing: 1px;
     font-weight: 700;
     border-radius: 30px;
-    color: rgba($green, .9);
-    background-color: $brand-color;
+    color: $black;
+    background-color: $green;
     &:hover {
-      background-color: darken($brand-color, 5%);
+      background-color: $light-green;
+      color: $green;
     }
     &:last-child {
       margin-right: 0;
