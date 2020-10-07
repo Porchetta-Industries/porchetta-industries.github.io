@@ -1,8 +1,20 @@
 <head>
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@alligatorio">
-  <meta name="twitter:title" content="{{ page.title }}">
-  
+  <meta name="twitter:site" content="@porchetta_ind">
+  <meta name="twitter:creator" content="@byt3bl33d3r">
+
+  {% if page.title %}
+    <meta name="twitter:title" content="{{ page.title }}">
+  {% else %}
+    <meta name="twitter:title" content="Porchetta Industries">
+  {% endif %}
+
+  {% if post.image %}
+    <meta name="twitter:image" content="{{site.baseurl}}{{post.image}}">
+  {% else %}
+    <meta name="twitter:image" content="{{site.baseurl}}/images/porchetta-logo2.png">
+  {% endif %}
+
   {% if page.description %}
     <meta name="twitter:description"
       content="{{ page.meta_description }}">
