@@ -10,7 +10,7 @@
   -webkit-appearance: none;
   text-align: center;
   text-decoration: none;
-  color: $green;
+  color: $black;
   transition: all 0.2s ease;
   cursor: pointer;
   &:hover {
@@ -23,9 +23,9 @@
     font-size: 16px;
     font-weight: 600;
     line-height: 50px;
-    background-color: $brand-color;
+    background-color: $green;
     &:hover {
-      background-color: darken($brand-color, 5%);
+      background-color: $black;
     }
   }
 
@@ -41,10 +41,10 @@
     letter-spacing: 1px;
     text-transform: uppercase;
     transition: all .2s ease;
-    background-color: $dark;
+    background-color: $green;
 
     &:hover {
-      background-color: darken($dark, 1%);
+      background-color: $black;
     }
   }
 
@@ -55,9 +55,9 @@
     border-radius: 30px;
     padding: 0 15px;
     color: $text-color;
-    background-color: $brand-color;
+    background-color: $green;
     &:hover {
-      background-color: darken($brand-color, 5%);
+      background-color: $black;
     }
     &::before {
       content: none !important;

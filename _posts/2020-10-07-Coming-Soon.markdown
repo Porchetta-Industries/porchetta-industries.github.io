@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  Coming soon...
+featured: true
 date:   2020-10-7 2:41:00
 tags:   Plans
 ---
