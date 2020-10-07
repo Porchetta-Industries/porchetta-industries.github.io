@@ -1,0 +1,71 @@
+/* Buttons */
+.button {
+  display: inline-block;
+  white-space: nowrap;
+  vertical-align: middle;
+  font: inherit;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  -webkit-appearance: none;
+  text-align: center;
+  text-decoration: none;
+  color: $green;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  &:hover {
+    color: $green;
+  }
+
+  &--primary {
+    padding: 0px 1.8rem;
+    height: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 50px;
+    background-color: $brand-color;
+    &:hover {
+      background-color: darken($brand-color, 5%);
+    }
+  }
+
+  &--middle {
+    position: relative;
+    height: 60px;
+    width: 100%;
+    max-width: 280px;
+    font-family: $heading-font-family;
+    font-size: 12px;
+    line-height: 60px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all .2s ease;
+    background-color: $dark;
+
+    &:hover {
+      background-color: darken($dark, 1%);
+    }
+  }
+
+  &--small {
+    height: 28px;
+    line-height: 28px;
+    display: inline-block;
+    border-radius: 30px;
+    padding: 0 15px;
+    color: $text-color;
+    background-color: $brand-color;
+    &:hover {
+      background-color: darken($brand-color, 5%);
+    }
+    &::before {
+      content: none !important;
+    }
+  }
+
+  &--big {
+    display: block;
+    width: 100%;
+  }
+}

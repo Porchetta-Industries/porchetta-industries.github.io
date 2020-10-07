@@ -1,0 +1,18 @@
+/* Pagination */
+.load-more {
+  margin: 0 auto;
+}
+
+.load-more-section {
+  margin: 30px auto;
+  text-align: center;
+  @media only screen and (max-width: $mobile) {
+    margin: 20px auto;
+  }
+}
+
+.load-more-posts {
+  i {
+    margin-left: 5px;
+  }
+}

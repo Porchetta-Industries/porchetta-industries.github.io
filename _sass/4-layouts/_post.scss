@@ -1,0 +1,298 @@
+/* Post */
+.post {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.post-image {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  user-select: none;
+}
+
+.image-box {
+  position: relative;
+  padding-top: 50%;
+  min-height: 280px;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 5px 10px 0px rgba(0,0,0,.15);
+  background-color: $dark;
+
+  @media only screen and (max-width: $desktop) {
+    padding-top: 55%;
+  }
+  
+  @media only screen and (max-width: $tablet) {
+    padding-top: 65%;
+  }
+}
+
+.post-tags {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  .post-tags__tag {
+    height: 23px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    padding: 0 10px;
+    text-transform: uppercase;
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 10px;
+    line-height: 23px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    border-radius: 30px;
+    color: rgba($green, .9);
+    background-color: $brand-color;
+    &:hover {
+      background-color: darken($brand-color, 5%);
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @media only screen and (max-width: $mobile) {
+      height: 20px;
+      line-height: 20px;
+    }
+  }
+}
+
+.post-head {
+  margin: 40px 0;
+}
+
+.post-title {
+  font-size: 43px;
+  margin: 10px 0 15px;
+  text-align: center;
+  @media only screen and (max-width: $tablet) {
+    font-size: 38px;
+  }
+  @media only screen and (max-width: $mobile) {
+    font-size: 28px;
+  }
+}
+
+.post__meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: $green;
+}
+
+.post__author {
+  display: flex;
+  align-items: center;
+  &-image {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-right: 7px;
+    border-radius: 50%;
+    border: 1px solid rgba($green, .6);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: $dark;
+  }
+  &-link {
+    font-size: 14px;
+    text-decoration: underline;
+    color: $text-color;
+    &:hover {
+      color: $text-color;
+    }
+  }
+  span {
+    color: rgba($green, .8);
+  }
+}
+
+.post__date {
+  font-size: 14px;
+  color: $text-color;
+  &::before {
+    content: "";
+    position: relative;
+    bottom: 0.2rem;
+    display: inline-block;
+    height: 3px;
+    width: 3px;
+    margin: 0 .5rem 0 .5rem;
+    border-radius: 50%;
+    background-color: rgba($green, .8);
+  }
+}
+
+.post__content {
+  color: rgba($text-color, .6);
+  a {
+    &:hover {
+      color: $text-color;
+      text-decoration: underline;
+    }
+  }
+}
+
+/* Share */
+.post__share {
+  margin-bottom: 80px;
+
+  .share__head {
+    text-align: center;
+  }
+
+  .share__title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 25px;
+    font-family: $heading-font-family;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .share__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .share__item {
+    margin: 0 5px;
+    text-align: center;
+  }
+
+  .share__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    font-size: 16px;
+    color: $black;
+    background-color: $green;
+    transition: all .2s;
+    &:hover {
+      &.share__facebook {
+        color: #3b5998;
+      }
+      &.share__twitter {
+        color: #55acee;
+      }
+      &.share__linkedin {
+        color: #0077b5;
+      }
+      &.share__pinterest {
+        color: #bd081c;
+      }
+    }
+  }
+
+  @media only screen and (max-width: $mobile) {
+    margin-bottom: 50px;
+  }
+}
+
+/* Post Navigation */
+.post__navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  a:first-child {
+    margin-right: 4%;
+  }
+  a:last-child {
+    margin-right: 0;
+  }
+
+  .prev, .next {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    min-height: 230px;
+    padding: 0 25px 25px;
+    border-radius: 30px;
+    overflow: hidden;
+    transition: transform .2s,-webkit-transform .2s;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,.15);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: $dark;
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(#10111e, 0.6);
+      pointer-events: none;
+    }
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    .post__nav {
+      display: inline-block;
+      margin-bottom: 5px;
+      font-size: 13px;
+      font-family: $heading-font-family;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: rgba($text-color, .8);
+    }
+
+    .post__nav-box {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+    }
+
+    .post__nav__title {
+      margin-bottom: 0;
+      font-size: 21px;
+      a {
+        color: $text-color;
+      }
+    }
+  }
+
+  .next {
+    text-align: right;
+    margin-left: auto;
+  }
+
+  @media only screen and (max-width: $tablet) {
+    flex-wrap: wrap;
+
+    .prev, .next {
+      width: 100%;
+    }
+
+    .prev {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+/* Disqus Comments */
+.comments__article {
+  margin-bottom: 20px;
+}

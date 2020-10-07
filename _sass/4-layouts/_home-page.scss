@@ -1,0 +1,221 @@
+/* Article */
+.article {
+  align-items: stretch;
+  flex-grow: 1;
+  min-height: 380px;
+  margin-bottom: 30px;
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  @media only screen and (max-width: $mobile) {
+    min-height: 280px;
+  }
+}
+
+.article__inner {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 5px 10px 0 rgba(0,0,0,.15);
+  background-color: $black;
+  
+  .featured-post {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: rgba($green, 0.8);
+    user-select: none;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      border-color: $brand-color $brand-color transparent transparent;
+      border-style: solid;
+      border-width: 29px;
+    }
+    i {
+      position: relative;
+    }
+  }
+}
+
+.article__title {
+  margin: 10px 0 15px;
+  font-size: 21px;
+  a {
+    color: $green;
+  }
+  @media only screen and (max-width: $mobile) {
+    margin: 5px 0 10px;
+    font-size: 18px;
+  }
+}
+
+.article__excerpt {
+  margin-bottom: 15px;
+  font-size: 15px;
+  color: rgba($green, .6);
+  @media only screen and (max-width: $mobile) {
+    margin-bottom: 10px;
+    font-size: 13px;
+    line-height: 21px;
+  }
+}
+
+.article__image {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  user-select: none;
+  background-color: $light-green;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(#10111e, 0.6);
+    pointer-events: none;
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+  }
+
+  @media only screen and (max-width: $tablet) {
+    padding-top: 75%;
+  }
+  @media only screen and (max-width: $mobile) {
+    padding-top: 80%;
+  }
+}
+
+.article__content {
+  z-index: 1;
+  width: 100%;
+  margin-top: auto;
+  padding: 0 30px 30px;
+  
+  @media only screen and (max-width: $mobile) {
+    padding: 20px;
+  }
+}
+
+.article__meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  color: $green;
+}
+
+.article-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.article-tags__box {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  line-height: 1;
+  .article__tag {
+    height: 23px;
+    padding: 0 10px;
+    margin: 0 5px 5px 0;
+    text-transform: uppercase;
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 10px;
+    line-height: 23px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    border-radius: 30px;
+    color: rgba($green, .9);
+    background-color: $brand-color;
+    &:hover {
+      background-color: darken($brand-color, 5%);
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @media only screen and (max-width: $mobile) {
+      height: 20px;
+      line-height: 20px;
+    }
+  }
+}
+
+.article__date {
+  font-size: 14px;
+  color: $text-color;
+  &::before {
+    content: "";
+    position: relative;
+    bottom: 0.2rem;
+    display: inline-block;
+    height: 3px;
+    width: 3px;
+    margin: 0 .5rem 0 .5rem;
+    border-radius: 50%;
+    background-color: rgba($text-color, .8);
+  }
+
+  @media only screen and (max-width: $mobile) {
+    display: none;
+  }
+}
+
+.article__author {
+  display: flex;
+  align-items: center;
+  &-image {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-right: 7px;
+    border-radius: 50%;
+    border: 1px solid rgba($green, .6);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: $light-green;
+  }
+  &-link {
+    font-size: 14px;
+    text-decoration: underline;
+    color: $green;
+    &:hover {
+      color: $green;
+    }
+  }
+  span {
+    color: rgba($green, .8);
+  }
+}

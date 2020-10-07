@@ -1,0 +1,20 @@
+/* Contact Page */
+.form__group {
+  margin-bottom: 20px;
+}
+
+.form__label {
+  display: inline-block;
+  margin-bottom: 5px;
+  font-family: $heading-font-family;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.form__input {
+  width: 100%;
+  padding: 15px;
+  font-family: $heading-font-family;
+  font-size: 14px;
+  border-radius: 5px;
+}

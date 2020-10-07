@@ -1,0 +1,30 @@
+<!-- begin hero -->
+<div class="container">
+  <div class="row">
+    <div class="col col-12">
+      {% if site.hero %}
+      <section class="hero">
+        <div class="hero__inner">
+          <div class="hero__image">
+            <img src="{{site.baseurl}}{{site.hero.image}}" alt="{{site.hero.title}}">
+          </div>
+          <div class="hero__content">
+            <h1 class="hero__title">{{site.hero.title}}</h1>
+            <p class="hero__desc">{{site.hero.description}}</p>
+          </div>
+        </div>
+      </section>
+      {% else %}
+      <section class="hero-without-image">
+        <div class="hero-inner">
+          <div class="hero-content">
+            <h1 class="hero__title">{{site.hero.title}}</h1>
+            <p class="hero__desc">{{site.hero.description}}</p>
+          </div>
+        </div>
+      </section>
+      {% endif %}
+    </div>
+  </div>
+</div>
+<!-- begin hero -->
