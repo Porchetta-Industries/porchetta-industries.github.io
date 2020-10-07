@@ -3,8 +3,8 @@
 title: Porchetta Industries
 logo: # You can add own logo. For example '/images/logo.png'.
 description: "A community that provides support to Open Source Infosec/hacking tool developers and helps them succeed with their own Github Sponsorships." 
-baseurl: "" # The subpath of your site, e.g. /blog
-url: "" # The base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/" # The subpath of your site, e.g. /blog
+url: "https://porchetta.industries" # The base hostname & protocol for your site, e.g. http://example.com
 
 
 #-------------------------------
