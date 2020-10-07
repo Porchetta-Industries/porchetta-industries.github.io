@@ -3,28 +3,16 @@
   <meta name="twitter:site" content="@porchetta_ind">
   <meta name="twitter:creator" content="@byt3bl33d3r">
 
-  {% if page.title %}
-    <meta name="twitter:title" content="{{ page.title }}">
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+
+  {% if page.image %}
+    <meta name="twitter:image" content="{{site.baseurl}}{{page.image}}">
   {% else %}
-    <meta name="twitter:title" content="Porchetta Industries">
+    <meta name="twitter:image" content="{{site.baseurl}}/images/porchetta-logo2.jpg">
   {% endif %}
 
-  {% if post.image %}
-    <meta name="twitter:image" content="{{site.baseurl}}{{post.image}}">
-  {% else %}
-    <meta name="twitter:image" content="{{site.baseurl}}/images/porchetta-logo2.png">
-  {% endif %}
-
-  {% if post.description %}
-    <meta name="twitter:description"
-      content="{{ post.description }}">
-  {% elsif post.content % }
-    <meta name="twitter:description"
-      content="{{ post.content | strip_html | truncate: 85 }}">
-  {% else %}
-    <meta name="twitter:description"
-      content="A community that provides support to Open Source Infosec/hacking tool developers and helps them succeed with their own Github Sponsorships">
-  {% endif %}
+  <meta name="twitter:description"
+    content="{% if page.description %}{{ site.description }}{% else %}{{ page.content | strip_html | truncate: 85 }}{% endif %}">
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -40,7 +28,7 @@
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600%7CPoppins:400,600,700&display=swap" rel="stylesheet">
 
   <!-- Ionicons -->
-  <link href="https://unpkg.com/ionicons@4.2.2/dist/css/ionicons.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/ionicons@4.6.3/dist/css/ionicons.min.css" rel="stylesheet">
 
   <style>
   {% capture include_to_scssify %}
