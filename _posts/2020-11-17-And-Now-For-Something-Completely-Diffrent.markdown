@@ -18,7 +18,7 @@ Warning: this will be a somewhat lengthy blog post. I do encourage everyone to r
 
 * A Porchetta Industries merch shop will be opened soon. All income from it will be donated to the authors of widely used OSS infosec/hacking tools on a bi-monthly basis (TBD).
 
-* [Offensive Security](https://www.offensive-security.com/) has expressed interest in sponsoring other open source Infosec/Hacking tool developers through the [Github Sponsorship](https://github.com/sponsors) program. Check out their [accompanying blog post]() on the Kali Linux website.
+* [Offensive Security](https://www.offensive-security.com/) has expressed interest in sponsoring other open source Infosec/Hacking tool developers through the [Github Sponsorship](https://github.com/sponsors) program. Check out their [accompanying blog post](https://www.kali.org/news/kali-linux-2020-4-release/) on the Kali Linux website.
 
 ***
 
