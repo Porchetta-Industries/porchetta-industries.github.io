@@ -1,3 +1,3 @@
 # Porchetta Industries Website
 
-https://porchetta.industries
+https://blog.porchetta.industries
