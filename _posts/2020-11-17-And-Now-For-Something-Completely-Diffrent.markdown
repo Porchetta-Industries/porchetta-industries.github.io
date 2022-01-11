@@ -1,7 +1,7 @@
 ---
 layout: post
 title: And now for something completely different...
-featured: true
+featured: false
 date: 2020-11-17 0:0:0
 image: '/images/hand.jpg'
 ---
